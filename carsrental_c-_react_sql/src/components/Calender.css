@@ -1,0 +1,29 @@
+.calendar {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .calendar-day {
+    width: calc(100% / 7);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .calendar-day.empty {
+    background-color: #f0f0f0;
+  }
+  

@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    color:#10103a
+}
+/* .p-fileupload-buttonbar{
+  width: 80px;
+  height: 80px;
+
+background-color: transparent; 
+display: flex;
+
+ align-items: center;
+
+} */
+.p-card-body{
+  width: 300px;
+  text-align: center;
+}
+.p-button.p-component.p-fileupload-choose{
+  width: 300px;
+  text-align: center;
+  background-color: teal;
+  border-color: teal;
+}
+.p-icon.p-button-icon,.p-inputnumber-button.p-inputnumber-button-up.p-button.p-button-icon-only.p-component,.p-inputnumber-button.p-inputnumber-button-down.p-button.p-button-icon-only.p-component{
+  background-color: teal;
+  border-color: rgb(8, 53, 53);
+}
+/* .p-button.p-component{
+  background-color: teal;
+
+} */.p-button.p-component.p-button-secondary{
+  background-color: rgb(102, 125, 128);
+  border-color: rgb(84, 109, 112);
+}
+.p-button.p-component{
+  background-color: teal;
+  border-color: teal;
+}

@@ -1,0 +1,97 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.search-container, .color-container {
+    flex: 1 1 auto;
+    min-width: 200px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.p-field {
+    margin-bottom: 1rem;
+}
+
+/* .catalog {
+    padding: 1rem;
+    overflow-y: auto;
+    height: 100vh;  Adjust the height as needed 
+} */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Adjust to your preference space-around*/
+    padding: 1rem;
+    /* overflow-y: auto; */
+    height: 100vh;/* Adjust the height as needed*/
+    width: 100%; /*Set width to 100% for responsiveness */
+}
+
+.p-grid .p-col-12 {
+    padding: 0.5rem;
+}
+
+.p-grid .p-col-6 {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.p-grid .p-col-4 {
+    width: 33.33%;
+    padding: 0.5rem;
+}
+
+.p-grid .p-col-3 {
+    width: 25%;
+    padding: 0.5rem;
+}
+
+.p-grid .p-col-2 {
+    width: 16.66%;
+    padding: 0.5rem;
+}
+
+.p-grid .p-col-1 {
+    width: 8.33%;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 960px) {
+    .p-grid .p-col-4 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .p-grid .p-col-4 {
+        width: 100%;
+    }
+}
+
+/* .catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 1rem;
+    height: 100vh;
+    width: 100%;
+}
+
+.cars-list {
+    flex: 1;
+}
+
+.thin-white-column {
+    width: 100px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    overflow-y: auto;
+    margin-left: auto; /* Push the column to the right */
+/* } */

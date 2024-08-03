@@ -1,0 +1,28 @@
+.car-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.car-details {
+    padding: 1rem;
+}
+
+.car-details h2 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+}
+
+.car-details p {
+    font-size: 1rem;
+    margin: 0 0 10px;
+    color: #333;
+}
