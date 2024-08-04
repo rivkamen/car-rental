@@ -26,10 +26,6 @@ export async function getLandlordById(landlordId) {
      })
  }
 export async function addLandlord(landlord) {
-    console.log("gfugiuh");
-console.log(landlord.Email);
-const d=new Date(landlord.Birthdate)
-console.log(d);
 /*{LandlordTz:"475487659", LandlordName: "fyghghjh", Birthdate: null}*/
    return await axios.post('/api/Landlord/',{LandlordTz:landlord.LandlordTz, LandlordName: landlord.LandlordName, Birthdate:null, Email: landlord.Email,Address:landlord.Address/*,LandlordPhone:landlord.LandlordPhone*/})
         .then((response) => {

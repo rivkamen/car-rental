@@ -321,7 +321,7 @@ const Login2=()=>{
             <div className="flex flex-column md:flex-row" style={{marginTop:'100px'}}>
                 <div className="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5">
                     <div className="flex flex-wrap justify-content-center align-items-center gap-2">
-                        <label className="w-6rem">שם משתמש</label>
+                        <label className="w-6rem">מ.ז. משתמש</label>
                         <InputText ref={username} id="username" type="text" className="w-12rem" />
                     </div>
                     <div className="flex flex-wrap justify-content-center align-items-center gap-2">

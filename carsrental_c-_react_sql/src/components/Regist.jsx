@@ -33,23 +33,21 @@ const Regist = (props) => {
     };
     const register = async (e) => {
         try {
-            const a={ LandlordTz: iduser.current.value, LandlordName: username.current.value, Birthdate:null, LandlordPhone: phone.current, Address: address.current.value, Email: email.current.value }
-                      console.log("a");
-                      console.log(phone);
+            // const a={ LandlordTz: iduser.current.value, LandlordName: username.current.value, Birthdate:null, LandlordPhone: phone.current, Address: address.current.value, Email: email.current.value }
+            
                   
 
-
-
-  console.log(a);
 
             const response = await addLandlord({ LandlordTz: iduser.current.value, LandlordName: username.current.value, Birthdate: null, LandlordPhone: phone.current, Address: address.current.value, Email: email.current.value });
             
             if (response.status < 200 || response.status >= 300) {
-                console.log("Data Problem, please try again");
+                alert("Data Problem, please try again");
                 // props.setDetailError("Data Problem, please try again");
+
             } else {
                 console.log("You added successfully :)");
                 // props.setDetailSuccess("You added successfully :)");
+                window.location.reload(true)
             }
         } catch (error) {
             console.error(error);
@@ -91,16 +89,16 @@ const Regist = (props) => {
     /**//*/*//*/*////////////////// ////////////////////////////////////////////////////////////*/ */
     const formik = useFormik({
         initialValues: {
-            username: "",
+            iduser: "",
             email: ""
 
         },
         validate: (data) => {
             let errors = {};
-            if (!data.username) {
-                console.log("username");
+            if (!data.iduser) {
+                console.log("iduser");
                 console.log(data);
-                errors.username = 'שדה חובה';
+                errors.iduser = 'שדה חובה';
                 
 
             }
@@ -115,8 +113,11 @@ const Regist = (props) => {
             return errors;
         },
         onSubmit: async () => {
+            console.log("יןןןןןןןןןןןןןןןןןןןןןן");
+
             await register();
-            setVisible(false)
+            setVisible(false);
+            console.log("formik");
 
         }
     });
@@ -145,21 +146,22 @@ const Regist = (props) => {
                         <label htmlFor="username" className="font-semibold">
                             שם משתמש                       
                         </label>
-                        <AutoComplete id="autoCompl2"style={{ width: '400px', height: '50px' }} label="Username" inputRef={username} value={formik.values.username}
-                            name='username'
-                            className={classNames({ 'p-invalid': isFormFieldInvalid('username') })}
-                            onChange={(e) => {
-                                setTextu(e.value)
-                                formik.setFieldValue('username', e.value);
-                            }}
-                        />
-                        {getFormErrorMessage('username')}
+                        <AutoComplete id="autoCompl2"style={{ width: '400px', height: '50px' }} label="Username" inputRef={username} /> 
                     </div><br />
                     <div className="inline-flex flex-column gap-2 p-fluid">
                         <label htmlFor="id" className="font-semibold">
                             מספר זהות
                         </label>
-                    <InputText keyfilter="int" style={{ width: '400px', height: '50px' }} ref={iduser} value={value3} onValueChange={(e) => setValue3(e.value)}/>
+                    <InputText keyfilter="int" style={{ width: '400px', height: '50px' }} ref={iduser} /*value={value3}*/ onValueChange={(e) => setValue3(e.value)}
+                    value={formik.values.iduser}
+                            name='iduser'
+                            className={classNames({ 'p-invalid': isFormFieldInvalid('iduser') })}
+                            onChange={(e) => {
+                                setTextu(e.value)
+                                formik.setFieldValue('iduser', e.value);
+                            }}
+                            />
+                        {getFormErrorMessage('iduser')}
                     </div>
                     <div className="inline-flex flex-column gap-2 p-fluid">
                         <label htmlFor="email" className="font-semibold">
